@@ -1,0 +1,17 @@
+body{
+    margin:0;
+    padding:0;
+    font-family:Helvetica, sans-serif;
+}
+header{
+    position:fixed;
+    height:100px;
+    width:100vw;
+    text-align:center;
+    border-bottom:1px solid black;
+}
+section{
+    position:relative;
+    top:120px;
+    text-align:center;
+}
