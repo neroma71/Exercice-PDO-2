@@ -25,7 +25,7 @@
         <?php
         require_once('connexion.php');
     $requete = $db->query('SELECT * FROM patients ORDER BY id DESC');
-    $clients = $requete->fetchALL();
+    $patients = $requete->fetchALL();
         foreach($patients as $patient){
             echo"<option value=".$patient['id'].">".$patient['lastname']."</option>";
         }
