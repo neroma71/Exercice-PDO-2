@@ -1,14 +1,14 @@
 <?php
-    if(!empty($_POST['daterdv'])){
+    if(isset($_POST['dateHour'])){
         require_once('connexion.php');
         $req = 'INSERT INTO appointments(dateHour, idPatients) VALUES (:dateHour, :idPatients)';
         $rdv = $db->prepare($req);
 
         $rdv->execute([
-            'dateHour'=>$_POST['titre'],
+            'dateHour'=>$_POST['dateHour'],
             'idPatients'=>$_POST['idPatients']
         ]);
-
+        header("location: liste-rendezvous.php");
     }
 ?>
 <!DOCTYPE html>
@@ -20,7 +20,7 @@
 </head>
 <body>
 <form method="post" action="">
-    <input type="date" name="dateHour">
+    <input type="datetime-local" name="dateHour">
     <select name="idPatients">
         <?php
         require_once('connexion.php');

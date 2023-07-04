@@ -17,6 +17,9 @@
     <p>
         <a href="ajout-rendezvous.php">ajouter un rendez-vous</a>
     </p>
+    <p>
+        <a href="liste-rendezvous.php">liste des rendez-vous</a>
+    </p>
     <?php
         require('connexion.php');
 
