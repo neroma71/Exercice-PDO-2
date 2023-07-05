@@ -1,4 +1,5 @@
 <?php
+/*ici on passe en get le parametre récupéré dans le lien de la page list-renezvous.php*/
  $modif= $_GET['modif'];
    
  require_once('connexion.php');

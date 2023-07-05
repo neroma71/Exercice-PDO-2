@@ -3,7 +3,7 @@
    <head>
        <meta charset="utf-8" /> 
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>Liste des news</title>
+       <title>Liste des patients</title>
        <meta name="robots" content="noindex, nofollow">
         <link rel="stylesheet" href="css/liste.min.css">
     </head>
@@ -12,7 +12,7 @@
             <h1>Listes des news</h1>
         </header>
 <section id="main">
-<h2><a href="rediger_news.php">ajouter un patients</a></h2>
+<h2><a href="ajout_patients.php">ajouter un patients</a></h2>
 <a href="index.php">retour à l'accueil</a>
 <?php
 require_once ('connexion.php'); 
@@ -74,8 +74,8 @@ $req = $db->query('SELECT * FROM patients ORDER BY id DESC');
  while ($patients = $req->fetch()){
 ?>
 <tr>
-<td><?php echo '<a href="rediger_news.php?modifier_news=' . $patients['id'] . '">'; ?>Modifier</td>
-<td><?php echo '<a href="liste_news.php?supprimer_news=' . $patients['id'] . '">'; ?>Supprimer</td>
+<td><?php echo '<a href="ajout_patients.php?modifier_news=' . $patients['id'] . '">'; ?>Modifier</td>
+<td><?php echo '<a href="ajout_patients.php?supprimer_news=' . $patients['id'] . '">'; ?>Supprimer</td>
 <td><?php echo htmlspecialchars($patients['lastname']."-".$patients['firstname']); ?></td>
 </tr>
 <?php
@@ -83,7 +83,5 @@ $req = $db->query('SELECT * FROM patients ORDER BY id DESC');
 ?>
 </table>
 </section>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-       <script src="js/menu.min.js"></script>
 </body>
 </html>

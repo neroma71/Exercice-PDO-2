@@ -9,10 +9,15 @@
 <body>
 <header>
     <h1>Bienvenu dans mon hôpital</h1>
+    <form action="recherche.php" method="get" id="monform">
+        <label for="rechercher">rechercher un patient</label>
+        <input type="search" name="terme">
+        <input type="submit" name="s" value="Rechercher">
+    </form>
 </header>
 <section>
     <p>
-        <a href="ajout-patient.php">ajouter un patient</a>
+        <a href="ajout_patients.php">ajouter un patient</a>
     </p>
     <p>
         <a href="ajout-rendezvous.php">ajouter un rendez-vous</a>

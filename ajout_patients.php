@@ -4,18 +4,15 @@
    <head>
        <meta charset="utf-8" />
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>Rédiger la page d'accueil</title>
+       <title>Ajouter un patient</title>
         <meta name="robots" content="noindex, nofollow">
         <link rel="stylesheet" href="css/news.min.css" />
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-       <script src="js/menu.min.js"></script>
- <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
     </head>
     <body>
         <header>
-            <h1>Page d'accueil</h1>
+            <h1>Ajouter un patient</h1>
         </header>
-<h3><a href="liste_news.php">Modifier l'accueil</a></h3><br />
+<h3><a href="liste_patients.php">modifier un patient</a></h3><br />
     
    <?php
 if (isset($_GET['modifier_news']))
@@ -60,7 +57,7 @@ else
 </form>
  
 <div id="lienretour">
-<a href="index.php" id="lienretour">retour à l'accueil'</a>
+<a href="index.php" id="lienretour">retour à l'accueil</a>
         </div>
     </body>
 </html>

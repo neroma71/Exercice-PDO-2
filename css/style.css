@@ -5,10 +5,15 @@ body{
 }
 header{
     position:fixed;
-    height:100px;
+    height:110px;
     width:100vw;
-    text-align:center;
     border-bottom:1px solid black;
+}
+h1{
+    position:fixed;
+    width:100%;
+    text-align:center;
+    top:30px;
 }
 section{
     position:relative;
@@ -23,4 +28,9 @@ section{
 }
 .listepatients p{
     margin-bottom:0;
+}
+#monform{
+    position:fixed;
+    top:10px;
+    left:calc(100vw - 300px);
 }

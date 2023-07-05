@@ -14,7 +14,7 @@
 <body>
 <section>
     <p>
-        <a href="ajout-patient.php">ajouter un patient</a>
+        <a href="ajout_patients.php">ajouter un patient</a>
     </p>
     <p>
         <a href="ajout-rendezvous.php">ajouter un rendez-vous</a>
@@ -24,6 +24,7 @@
         <p>
             <?php echo $rdv['datefr']; ?><?php echo '<a href="profil-patient.php?profil='. $rdv['idPatients'] .'">'; ?> info rdv</a>
             <?php echo '<a href="suppr-rdv.php?suppr_rdv='. $rdv['id'] .'">'; ?> supprimer</a>
+            <!-- ici on passe le paramêtre par exemple modif qu'on va récupérer avec get sur la page de traitement -->
             <?php echo '<a href="modif1.php?modif='. $rdv['id'] .'">'; ?>modifier</a>
         </p>
         <?php endforeach; ?>
