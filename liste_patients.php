@@ -5,13 +5,13 @@
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <title>Liste des patients</title>
        <meta name="robots" content="noindex, nofollow">
-        <link rel="stylesheet" href="css/liste.min.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <header>
             <h1>Listes des news</h1>
         </header>
-<section id="main">
+<section>
 <h2><a href="ajout_patients.php">ajouter un patients</a></h2>
 <a href="index.php">retour à l'accueil</a>
 <?php
@@ -53,10 +53,8 @@ if (isset($_POST['lastname']) && isset($_POST['firstname']) && isset($_POST['bir
         )));
     }
 }
-if (isset($_GET['supprimer_news'])) // Si l'on demande de supprimer une news.
+if (isset($_GET['supprimer_news'])) 
 {
-    // Alors on supprime la news correspondante.
-    // On protège la variable « id » avec une requete préparée pour éviter une faille SQL.
    $req = $db->prepare("DELETE FROM patients WHERE id=:id");
     if($req->execute(array(
         'id'=> $_GET['supprimer_news']
@@ -75,7 +73,7 @@ $req = $db->query('SELECT * FROM patients ORDER BY id DESC');
 ?>
 <tr>
 <td><?php echo '<a href="ajout_patients.php?modifier_news=' . $patients['id'] . '">'; ?>Modifier</td>
-<td><?php echo '<a href="ajout_patients.php?supprimer_news=' . $patients['id'] . '">'; ?>Supprimer</td>
+<td><?php echo '<a href="liste_patients.php?supprimer_news=' . $patients['id'] . '">'; ?>Supprimer</td>
 <td><?php echo htmlspecialchars($patients['lastname']."-".$patients['firstname']); ?></td>
 </tr>
 <?php

@@ -6,12 +6,13 @@
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <title>Ajouter un patient</title>
         <meta name="robots" content="noindex, nofollow">
-        <link rel="stylesheet" href="css/news.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
         <header>
             <h1>Ajouter un patient</h1>
         </header>
+        <section>
 <h3><a href="liste_patients.php">modifier un patient</a></h3><br />
     
    <?php
@@ -59,5 +60,6 @@ else
 <div id="lienretour">
 <a href="index.php" id="lienretour">retour à l'accueil</a>
         </div>
+</section>
     </body>
 </html>

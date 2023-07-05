@@ -11,20 +11,24 @@
     <h1>Bienvenu dans mon hôpital</h1>
     <form action="recherche.php" method="get" id="monform">
         <label for="rechercher">rechercher un patient</label>
-        <input type="search" name="terme">
+        <input type="search" name="terme" id="rechercher">
         <input type="submit" name="s" value="Rechercher">
     </form>
+    <nav>
+        <ul>
+            <li>
+        <a href="ajout_patients.php">ajouter un patient</a>
+            </li>
+            <li>
+        <a href="ajout-rendezvous.php">ajouter un rendez-vous</a>
+            </li>
+            <li>
+        <a href="liste-rendezvous.php">liste des rendez-vous</a>
+        </li>
+</ul>
+    </nav>
 </header>
 <section>
-    <p>
-        <a href="ajout_patients.php">ajouter un patient</a>
-    </p>
-    <p>
-        <a href="ajout-rendezvous.php">ajouter un rendez-vous</a>
-    </p>
-    <p>
-        <a href="liste-rendezvous.php">liste des rendez-vous</a>
-    </p>
     <?php
         require('connexion.php');
 
@@ -33,7 +37,8 @@
 ?>
 <article class="listepatients">
     <?php  foreach($patients as $patient): ?>
-            <p><?php echo $patient['firstname']." ". $patient['lastname']; ?><?php echo '<a href="profil-patient.php?profil='. $patient['id'] .'">'; ?> profile complet</a></p>
+            <p><?php echo $patient['firstname']." ". $patient['lastname']; ?>
+            <?php echo ' - <a href="profil-patient.php?profil='. $patient['id'] .'">'; ?> profile complet</a></p>
         <?php endforeach; ?>
         <article>
 </section>
